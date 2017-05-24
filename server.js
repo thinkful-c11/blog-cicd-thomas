@@ -13,6 +13,10 @@ app.use(morgan('common'));
 
 app.use('/blog-posts', blogPostsRouter);
 
+BlogPosts.create("Dogs", "are cool", "cats");
+BlogPosts.create("Dogs", "are cool", "cats");
+BlogPosts.create("Dogs", "are cool", "cats");
+
 app.listen(process.env.PORT  || 3000, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 3000}`);
 });
