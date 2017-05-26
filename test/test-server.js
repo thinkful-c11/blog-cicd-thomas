@@ -35,5 +35,19 @@ describe('Blog Posts', function() {
       });
   });
 
+  it('should add an item on POST', function() {
+    const newPost = {title:'oranges', content:'are bananas', author:'somebody', publishDate:'26 May 2017'};
+    return chai.request(app)
+      .post('/blog-posts')
+      .send(newPost)
+      .then(function(res) {
+        res.should.have.status(201);
+        res.should.be.json;
+        res.body.should.be.a('object');
+        res.body.should.include.keys('id', 'title', 'content', 'author', 'publishDate');
+        res.body.id.should.not.be.null;
+        res.body.should.deep.equal(Object.assign(newPost, {id: res.body.id}));
+      });
+  });
 
 });
