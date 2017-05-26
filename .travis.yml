@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: nQc36t7YoPHwV630lhc43PzN3/O6BUnBsQ0GXzmprkgFY8CfSaaup2lKpAd32ykDar1VrqTupdDOZUAGr3SlzZN/NrsuX3prjO/oYEX4xYraqhabgkL3ilPsm76TEAUm/Al/TJYo6W7pQIvp9SbgKtqL4eiqUZ+HaDGKGraUkc2sCYHTgg3i2J/bMZ+ATUfuCwZlPPKbAKZ/3XM+bMJRLjdvHu+HHJOaK7NVOoekBPozqmaHaxwBavMpjJ2bQhsuODQE2co+cK/dml0TXr091Wdn/SixIQClETXfWsJb+AhWyw6zzboSEfAlv2pZmAzMhNwnh0WnB34Suj85JBTiY3Y7U/Cqmhe24+/kwCTWBwSxmpJO6hIxeHSoGoSmkNGZetCKduAe42NizCUEBV4Cm5L7S3t4hDkcFjx1v/0dQXowYiXx7+wknwoUPN/fKRCb1yOt3DT3TB5wyFsPkPL5Mnduw7WJxpZF2U9AWi8m591BtCIpZRcXvmVKHz4KjE82nlq+yPCAWuE3Hwy/VABuc/9a504MBeZV/RMD977Zul42eN4zEuYd/T81waypErHRLMNlMw1SzVNkEAobZEL4+lDOsObOzl6A1gdo6+8LYxoDZShGZNycNPVVs+BcdS3q1V+WZN+awqv5kSh37i4cbPvdKsRhLRpHnW+TKpggek8=
+  app: blog-cicd-thomas
+  on:
+    repo: thinkful-c11/blog-cicd-thomas
